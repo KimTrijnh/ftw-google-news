@@ -79,15 +79,19 @@ for(let i = 0; i <checkedSources.length; i++) {
  checkedNews = checkedNews.concat(newsData.filter( article => article.source.name === checkedSources[i]));
  }
 
- news.innerHTML =  checkedNews.map( article => 
-    `<div class="article">
-    <h2 class="title" id="title">${article.title}</h2>
-    <p class="time">${moment(article.publishedAt).fromNow()}</p>
-    <p class="source">${article.source.name}</p>
-    <img src=${article.urlToImage} alt="">
-    <a href="" class="link" >${article.url}</a>
-</div>`).join('');
-}
+ if(checkedSources.length >0) {
+    news.innerHTML =  checkedNews.map( article => 
+        `<div class="article">
+        <h2 class="title" id="title">${article.title}</h2>
+        <p class="time">${moment(article.publishedAt).fromNow()}</p>
+        <p class="source">${article.source.name}</p>
+        <img src=${article.urlToImage} alt="">
+        <a href="" class="link" >${article.url}</a>
+    </div>`).join('');
+ } else if( checkedSources.length == 0) {
+     render();
+ }
+ }
 
 
 
