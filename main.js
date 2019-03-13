@@ -6,19 +6,21 @@ let checkboxs = document.getElementById('checkboxs');
 let sourcesArray = [];
 let country;
 let size = 5;
+let category = 'general';
 let newsData = [];
 
 
 // async function
 
     async function fetchNews() {
-        let url = `https://newsapi.org/v2/top-headlines?country=us&pageSize=${size}&apiKey=30d561c7b2db4deebf5dceab4175cda9`;
+        let url = `https://newsapi.org/v2/top-headlines?country=us&pageSize=${size}&category=${category}&apiKey=30d561c7b2db4deebf5dceab4175cda9`;
         // await response of fetch call
         let response = await fetch(url);
         // only proceed once promise is resolved
         let data = await response.json();
         // only proceed once second promise is resolved
        newsData = data.articles;
+      
        render();
     }
 
@@ -26,8 +28,10 @@ let newsData = [];
 
 
 function render() {
-    totalNews.innerHTML = `<span class="badge badge-primary">${newsData.length} articles</span>`;
 
+
+    totalNews.innerHTML = `<span class="badge badge-primary">${newsData.length} articles</span>`;
+    
       news.innerHTML =  newsData.map( article => 
     
         `<div class="article">
@@ -38,7 +42,8 @@ function render() {
         
         <a href="" class="link" >${article.url}</a>
     </div>`);
- 
+    sourcesArray = newsData.map(article => article.source.name);
+
 
 }
 
@@ -55,3 +60,11 @@ fetchNews();
 
 // sourcesArray.push(i.source.name);
 //         html += `<input type="checkbox" class="form-check-input" name="${i.source.name}" id="${i.source.id}"><label class="form-check-label" for="${i.source.id}">${i.source.name}</label>`;
+
+
+function changeCategory(e) {
+    console.log(e);
+category = e.innerText;
+console.log(category);
+fetchNews();
+} 
