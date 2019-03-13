@@ -3,9 +3,14 @@
 Link: https://ftw-simple-news.netlify.com/
 
 
+
 **Challenge**
 - Requried a lot of chaining of functionality. Althought Can make it works but it is kind of too mannual work.
 want to find a better way. Especially in the way of connection between those functionalities.
+
+**Bugs are waiting to be fixed**
+[ ] When change category, list of checkboxs from previous category still remains
+[ ] Confirm whether using fetchNews() in every function is refreshing the page or not???
 
 **WHAT SHOULD FIND TIME TO LEARN MORE**
 - API
