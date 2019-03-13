@@ -9,8 +9,8 @@ Link: https://ftw-simple-news.netlify.com/
 want to find a better way. Especially in the way of connection between those functionalities.
 
 **Bugs are waiting to be fixed**
-[ ] When change category, list of checkboxs from previous category still remains
-[ ] Confirm whether using fetchNews() in every function is refreshing the page or not???
+- [ ] When doing any change category/readmore/etc, list of checkboxs from previous category still remains
+- [ ] Confirm whether using fetchNews() in every function is refreshing the page or not???
 
 **WHAT SHOULD FIND TIME TO LEARN MORE**
 - API
