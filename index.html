@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
 </head>
+
 <body>
     <div class="container">
         <h1>News</h1>
-        <div id="checkboxs"></div>   
-        <div id="totalNews"></div>
-        <div id="news">
-         
-            
+        <div class="dropdown show">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Dropdown link
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#" onclick="changeCategory(this)">general</a>
+                <a class="dropdown-item" href="#" onclick="changeCategory(this)">business</a>
+                <a class="dropdown-item" href="#" onclick="changeCategory(this)">entertainment</a>
+                <a class="dropdown-item" href="#" onclick="changeCategory(this)">health</a>
+                <a class="dropdown-item" href="#" onclick="changeCategory(this)">science</a>
+                <a class="dropdown-item" href="#" onclick="changeCategory(this)">sports</a>
+                <a class="dropdown-item" href="#" onclick="changeCategory(this)">technology</a>
 
-    </div>
-    <button id="readMore" type="button" class="btn btn-info">I'm a news hunger...</button>
-    <script src="main.js"></script>
+            </div>
+        </div>
+        <div id="totalNews"></div>
+        <div id="checkboxs"></div>
+        <div id="news">
+
+
+
+        </div>
+        <button id="readMore" type="button" class="btn btn-info">I'm a news hunger...</button>
+        <script src="main.js"></script>
 
 </body>
+
 </html>
