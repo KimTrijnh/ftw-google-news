@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>We News</title>
+    <title>Hight News</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -16,13 +17,13 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>News</h1>
+    <div class="container my-5">
+        <h1>Hight News</h1>
         <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
-                Dropdown link
-            </a>
+                Category
+            </a> 
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <a class="dropdown-item" href="#" onclick="changeCategory(this)">general</a>
                 <a class="dropdown-item" href="#" onclick="changeCategory(this)">business</a>
@@ -36,12 +37,8 @@
         </div>
         <div id="totalNews"></div>
         <form id="checkboxs" class=""></form>
-        <div id="news">
-
-
-
-        </div>
-        <button id="readMore" type="button" class="btn btn-info">I'm a news hunger...</button>
+        <div id="news" class="d-flex flex-column"></div>
+        <button id="readMore" type="button" class="btn btn-info my-3">Gimme more...</button>
         <script src="main.js"></script>
 
 </body>
