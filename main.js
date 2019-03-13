@@ -32,10 +32,7 @@ function getrepeatedSources(arr) {
         }
         newArr.push(count);
       }
-    }
-    
-  return newArr;  
-  }
+
 
 fetchNews();
 // async function
@@ -134,7 +131,6 @@ function toggleChecked(e) {
     }
 }
 
-
 // const names = ['Mike', 'Matt', 'Nancy', 'Adam', 'Jenny', 'Nancy', 'Carl']
 
 // const count = names =>
@@ -142,4 +138,3 @@ function toggleChecked(e) {
 //         ...a,
 //         [b]: (a[b] || 0) + 1
 //     }));
-
